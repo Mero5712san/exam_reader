@@ -1,0 +1,9 @@
+{
+    "name": "examreader",
+    "version": "1.0.0",
+    "private": true,
+    "description": "UI to fetch and display exam questions and answers",
+    "scripts": {
+        "start": "node server.js"
+    }
+}

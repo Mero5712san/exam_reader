@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Reader</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <main class="container">
+    <!-- <header class="hero">
+      <p class="eyebrow">EXAM READER</p>
+      <h1>Questions + Answers Viewer</h1>
+      <p class="subtitle">Paste your token and API URL (or a full curl command). The app fetches data and shows only questions and answers in a clean layout.</p>
+    </header> -->
+
+    <section class="panel input-panel">
+      <form id="fetch-form">
+        <label for="token">Token (Bearer token only)</label>
+        <input id="token" name="token" type="password" placeholder="Paste token here" autocomplete="off" />
+
+        <label for="url">API URL or curl command</label>
+        <textarea id="url" name="url" rows="4" placeholder="https://api.example.com/exams/... or curl -H 'Authorization: Bearer ...' 'https://api.example.com/...'"></textarea>
+
+        <button id="fetch-btn" type="submit">Fetch and Open Questions Page</button>
+      </form>
+      <p id="status" class="status"></p>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>

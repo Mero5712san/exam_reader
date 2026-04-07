@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Reader - Questions</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="questions-page">
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <main class="container">
+    <!-- <header class="hero">
+      <p class="eyebrow">EXAM READER</p>
+      <h1>Questions</h1>
+      <p class="subtitle">Fetched questions are shown below.</p>
+      <p><a class="back-link" href="/">Back to Input Page</a></p>
+    </header> -->
+
+    <section class="page-actions">
+      <a class="action-link" href="/">Back to Input Page</a>
+      <button id="print-btn" type="button" class="print-btn">Print / Download PDF</button>
+    </section>
+
+    <section id="meta" class="panel meta hidden"></section>
+    <p id="status" class="status"></p>
+    <section id="qa-list" class="qa-list"></section>
+  </main>
+
+  <template id="qa-template">
+    <article class="panel qa-item">
+      <div class="qa-head">
+        <span class="qno"></span>
+        <span class="marks"></span>
+      </div>
+      <div class="question"></div>
+      <div class="answer-block">
+        <h3>Answer</h3>
+        <div class="answer"></div>
+      </div>
+    </article>
+  </template>
+
+  <script src="/script.js"></script>
+</body>
+</html>
