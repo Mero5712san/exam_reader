@@ -9,7 +9,6 @@ const submitBtn = document.getElementById("fetch-btn");
 const metaEl = document.getElementById("meta");
 const qaListEl = document.getElementById("qa-list");
 const template = document.getElementById("qa-template");
-const printBtn = document.getElementById("print-btn");
 
 function toHtmlContent(htmlLike) {
     const wrapper = document.createElement("div");
@@ -39,10 +38,14 @@ function setStatus(message, isError = false) {
 }
 
 function clearResults() {
-    if (!qaListEl || !metaEl) return;
-    qaListEl.innerHTML = "";
-    metaEl.innerHTML = "";
-    metaEl.classList.add("hidden");
+    if (qaListEl) {
+        qaListEl.innerHTML = "";
+    }
+
+    if (metaEl) {
+        metaEl.innerHTML = "";
+        metaEl.classList.add("hidden");
+    }
 }
 
 function renderMeta(data) {
@@ -172,8 +175,3 @@ if (qaListEl && template && !form) {
     renderStoredPayload();
 }
 
-if (printBtn) {
-    printBtn.addEventListener("click", () => {
-        window.print();
-    });
-}
